@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace RoadKill.Plugins.Kittens
 {
-    public class KittensPlugin : Roadkill.Core.Plugins.CustomVariablePlugin
+    public class KittensPlugin : Roadkill.Core.Plugins.TextPlugin
     {
         public KittensPlugin(ApplicationSettings applicationSettings, IRepository repository)
             : base(applicationSettings, repository)
@@ -27,6 +27,11 @@ namespace RoadKill.Plugins.Kittens
         public override string Description
         {
             get { return "KittensPlugin"; }
+        }
+
+        public override string Version
+        {
+            get { return "1"; }
         }
 
         public override string AfterParse(string html)
